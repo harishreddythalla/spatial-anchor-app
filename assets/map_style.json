@@ -1,0 +1,60 @@
+{
+  "version": 8,
+  "sources": {
+    "admin-boundaries": {
+      "type": "vector",
+      "url": "pmtiles://{PMTILES_PATH}"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#f5f5f5"
+      }
+    },
+    {
+      "id": "districts-line",
+      "type": "line",
+      "source": "admin-boundaries",
+      "source-layer": "districts",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "paint": {
+        "line-color": "#d32f2f",
+        "line-width": 3
+      }
+    },
+    {
+      "id": "mandals-line",
+      "type": "line",
+      "source": "admin-boundaries",
+      "source-layer": "mandals",
+      "minzoom": 11,
+      "maxzoom": 13,
+      "paint": {
+        "line-color": "#1976d2",
+        "line-width": 2,
+        "line-dasharray": [2, 2]
+      }
+    },
+    {
+      "id": "villages-fill",
+      "type": "fill",
+      "source": "admin-boundaries",
+      "source-layer": "villages",
+      "minzoom": 13,
+      "maxzoom": 22,
+      "paint": {
+        "fill-color": [
+          "case",
+          ["boolean", ["feature-state", "highlight"], false],
+          "rgba(255, 235, 59, 0.6)",
+          "rgba(0, 0, 0, 0)"
+        ],
+        "fill-outline-color": "#757575"
+      }
+    }
+  ]
+}

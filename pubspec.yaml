@@ -1,0 +1,37 @@
+name: spatial_anchor_map
+description: "A cognitive prosthetic map for Developmental Topographical Disorientation."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  latlong2: ^0.9.1
+  geolocator: ^14.0.2
+  flutter_compass: ^0.8.0
+  flutter_riverpod: ^3.3.1
+  shimmer: ^3.0.0
+  http: ^1.2.2
+  collection: ^1.18.0
+  path_provider: ^2.1.3
+  shared_preferences: ^2.2.3
+  maplibre: ^0.3.4+1
+  geobase: ^1.5.0
+  turf: ^0.0.10
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/map_style.json
+    - assets/data/manifest.json
+    - assets/data/fallback_detection.geojson
+  config:
+    enable-swift-package-manager: false

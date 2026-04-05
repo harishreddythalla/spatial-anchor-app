@@ -1,0 +1,20 @@
+[
+  {
+    "id": "karnataka",
+    "name": "Karnataka",
+    "filename": "karnataka.geojson",
+    "feature_count": 23729,
+    "size_mb": 40.2,
+    "tiles_filename": "karnataka_boundaries.pmtiles",
+    "tiles_size_mb": 12.5
+  },
+  {
+    "id": "telangana",
+    "name": "Telangana",
+    "filename": "telangana.geojson",
+    "feature_count": 9538,
+    "size_mb": 65.5,
+    "tiles_filename": "telangana_boundaries.pmtiles",
+    "tiles_size_mb": 8.2
+  }
+]
